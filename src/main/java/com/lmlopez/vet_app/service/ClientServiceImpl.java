@@ -5,9 +5,11 @@ import com.lmlopez.vet_app.entity.Pet;
 import com.lmlopez.vet_app.repository.ClientRepository;
 import com.lmlopez.vet_app.repository.PetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ClientServiceImpl implements IClientService{
 
     @Autowired
@@ -49,7 +51,7 @@ public class ClientServiceImpl implements IClientService{
     }
 
     @Override
-    public void deletePet(Pet pet){
-        petRepository.deleteById(pet.getId());
+    public void deletePet(Long id){
+        petRepository.deleteById(id);
     }
 }

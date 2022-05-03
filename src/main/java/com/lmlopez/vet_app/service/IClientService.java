@@ -2,11 +2,9 @@ package com.lmlopez.vet_app.service;
 
 import com.lmlopez.vet_app.entity.Client;
 import com.lmlopez.vet_app.entity.Pet;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public interface IClientService {
 
     List<Client> getAllClients();
@@ -19,5 +17,5 @@ public interface IClientService {
 
     Client savePet(Pet pet);
 
-    void deletePet(Pet pet);
+    void deletePet(Long id);
 }
