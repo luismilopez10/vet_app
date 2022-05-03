@@ -44,7 +44,7 @@ public class ClientServiceImpl implements IClientService{
 
     @Override
     public Client savePet(Pet pet){
-        Client client = clientRepository.findById(pet.getFK_client_id()).get();
+        Client client = clientRepository.findById(pet.getFkClientId()).get();
         client.addPet(pet);
         petRepository.save(pet);
         return clientRepository.save(client);

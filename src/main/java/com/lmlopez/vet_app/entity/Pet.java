@@ -20,5 +20,5 @@ public class Pet {
 
     private Integer age;
 
-    private Long FK_client_id;
+    private Long fkClientId;
 }

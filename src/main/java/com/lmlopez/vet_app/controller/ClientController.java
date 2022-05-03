@@ -38,7 +38,7 @@ public class ClientController {
     }
 
     @PostMapping("/pets")
-    public Client savePet(Pet pet){
+    public Client savePet(@RequestBody Pet pet){
         return clientService.savePet(pet);
     }
 
